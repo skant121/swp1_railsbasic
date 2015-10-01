@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>쓸데없는페이지</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  
+  <style>
+  
+    nav {background-color: #CCFFFF; padding: 10px;}
+    nav a {text-decoration: none;}
+  .contents {overflow: hidden; background-color: lightyellow; padding: 20px;}
+  .contents a {text-decoration: none;}
+  footer {float: bottom; padding: 10px; color: gray;}
+  section{padding: 40px;}
+  body{margin: 0px;}
+  
+   @media (max-width: 768px) {
+     .contents{width: 100%;}
+     header{width: 100%;}
+     footer{width: 100%;}
+   }
+  
+  </style>
+</head>
+<body>
+  <nav>
+  <div class="menu">
+   <a href="/">Home</a>
+   
+   <a href="/about">About</a>
+   
+   <a href="/예린">예린</a>
+   
+   <a href="/지민">지민</a>
+   
+   <a href="/현주">현주</a>
+   
+   <a href="/지영">지영</a>
+   
+   <a href="/contacts">Contacts</a>
+   </div>
+   </nav>
+   
+   <section>
+   <div class="contents">
+   <%= yield %>
+   </div>
+   </section>
+   
+   
+   
+   
+   
+  <footer>
+    Copyright&copy; 2015 yerin All right reserve  
+  </footer>
+   
+
+
+</body>
+</html>
